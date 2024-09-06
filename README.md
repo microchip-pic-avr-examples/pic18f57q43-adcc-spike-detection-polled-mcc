@@ -17,7 +17,7 @@ Example Components are a tight integration of learning material directly into MC
 
 **Note:** What is not shown is that the ADCC and UART interrupts need to be disabled.  
 
-![MCC Melody Example Components](images/ADCC_SpikeDetect_Polled-from-Callbacks.png)
+![MCC Melody Example Components](images/ADCCExample-SpikeDetect-Polled-from-Callbacks.png)
 
 
 Complete projects, available in [MPLAB® Discover](https://mplab-discover.microchip.com) or GitHub, are specific to a board and microcontroller. However, the current project could be recreated on a range of supported microcontrollers by following the steps in the example component.
