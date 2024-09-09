@@ -6,16 +6,16 @@
    </picture>
 </a>
 
-# MCC Melody ADC Spike Detection Example - Polled Implementation (PIC18F57Q43)
+# MCC Melody Analog-to-Digital Converter with Computation (ADCC) Spike Detection Example - Polled Implementation (PIC18F57Q43)
 
-The [ADC Spike Detection Example](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MCC.MELODY.EXAMPLES.RUNNING.ADCC.SPIKE&version=latest&redirect=true "Analog-to-Digital Conversion (ADC) Data Streamer example"), ADCC Spike Detection is visualized with the Data Streamer. The spike detection can be modified to observe the change in sensitivity, to the rate of change of the ADC samples. Using a Polling Design Pattern, a change (above a set threshold) in the ADC result between successive conversions represents a \"spike\". Every 100 ms delay starts an ADC conversion and sends a Data Streamer frame. The code continuously checks for a spike and updates the adcResult_lastSpike and adcSpikeCount when spikes are detected.
+The [ADC Spike Detection Example](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MCC.MELODY.EXAMPLES.RUNNING.ADCC.SPIKE&version=latest&redirect=true "Analog-to-Digital Conversion (ADC) Data Streamer example"), ADC with Computation Spike Detection is visualized with the Data Streamer. The spike detection can be modified to observe the change in sensitivity to the rate of change of the ADC samples. Using a Polling Design Pattern, a change (above a set threshold) in the ADC result between successive conversions represents a \"spike\". Every 100 ms delay starts an ADC conversion and sends a Data Streamer frame. The code continuously checks for a spike and updates the `adcResult_lastSpike` and `adcSpikeCount` when spikes are detected.
 
 ## MCC Melody Example Components
 Example Components are a tight integration of learning material directly into MCC. This allows users to conveniently place configuration instructions side-by-side to the components they are configuring. For more information, refer to the [MCC Melody Example Components Introduction](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MCC.MELODY.EXAMPLES&version=latest&redirect=true). 
 
 **Note:** The image below shows the ADCC Example Component, as it would be moving to the ADCC Spike Detect Example - Callbacks implementation. A diff of what is needed to move to the Polled implementation is shown. 
 
-**Note:** What is not shown is that the ADCC and UART interrupts need to be disabled.  
+**Note:** What is not shown is that the ADC with Computation and UART interrupts need to be disabled.  
 
 ![MCC Melody Example Components](images/ADCCExample-SpikeDetect-Polled-from-Callbacks.png)
 
@@ -33,7 +33,7 @@ Example Components are related to [MCC Melody Design Patterns for Control Flow](
 - MPLAB® XC8 2.46.0 or newer [(MPLAB® XC8 2.46)](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers/xc8)
 
 - MPLAB® Code Configurator (MCC) Plugin Version 5.5.1 or newer (*Tools>Plugins>Installed*, search: "MCC")
-- ADC Converter with Computation (ADCC) Example Component 1.0.0 
+- ADC with Computation (ADCC) Example Component 1.0.0 
 - MCC Core 5.7.1 or newer 
 - MCC Melody Core 2.7.1 or newer (Communicates with the MCC core, providing views and other functionality for MCC Melody)
 
@@ -73,9 +73,9 @@ The image below shows the [ADCC Basic Printf example](https://onlinedocs.microch
 
 ![Loading the ds file](images/RunningDataStreamerEx-Open_ds_file_12cm.png)
 
-The data_streamer Properties window will open up, displaying the loaded adcResult and adcSampleCount variables. 
+The data_streamer Properties window will open up, displaying the loaded `adcResult` and `adcSampleCount` variables. 
 
-1) Click the ![save button](images/button-save.png) button to load this data streamer configuration, for the ADCC Spike Detect Example. 
+1) Click the ![save button](images/button-save.png) button to load this data streamer configuration, for the ADC with Computation Spike Detect Example. 
 
 ![ds file loaded](images/ds_file_loaded_spikeDetect.png)
 
