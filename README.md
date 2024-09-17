@@ -1,14 +1,15 @@
-<a target="_blank" href="https://www.microchip.com/" id="top-of-page">
-   <picture>
-      <source media="(prefers-color-scheme: light)" srcset="images/mchp_logo_light.png" width="350">
-      <source media="(prefers-color-scheme: dark)" srcset="images/mchp_logo_dark.png" width="350">
-      <img alt="Microchip Technologies Inc." src="https://www.microchip.com/content/experience-fragments/mchp/en_us/site/header/master/_jcr_content/root/responsivegrid/header/logo.coreimg.100.300.png/1605828081463/microchip.png">
-   </picture>
-</a>
+<a href="https://www.microchip.com" rel="nofollow"><img src="images/microchip.png" alt="MCHP" width="300"/></a>
 
 # MCC Melody Analog-to-Digital Converter with Computation (ADCC) Spike Detection Example - Polled Implementation (PIC18F57Q43)
 
 In the [ADCC Spike Detection Example](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MCC.MELODY.EXAMPLES.RUNNING.ADCC.SPIKE&version=latest&redirect=true "Analog-to-Digital Converter with Computation (ADCC) Spike Detection Example"), ADC with Computation Spike Detection is visualized with the Data Streamer. The spike detection can be modified to observe the change in sensitivity to the rate of change of the ADC samples. Using a Polling Design Pattern, a change (above a set threshold) in the ADC result between successive conversions represents a \"spike\". Every 100 ms delay starts an ADC conversion and sends a Data Streamer frame. The code continuously checks for a spike and updates the `adcResult_lastSpike` and `adcSpikeCount` when spikes are detected.
+
+## Video Building This Example 
+
+[![Video Building this Example](images/8_ADC-Spike-Detect-Polled-VideoImage.png)](https://youtu.be/Ed6lzZpt3Pw?list=PLtQdQmNK_0DTA08RmyuJH4dyNrYGDGi0l)
+
+**Video:** [Introducing MCC Melody Example Components](https://youtu.be/zK5jLiIIYvE?list=PLtQdQmNK_0DTA08RmyuJH4dyNrYGDGi0l)
+(while building the Polled version of the Timer Toggle LED example). 
 
 ## MCC Melody Example Components
 Example Components are a tight integration of learning material directly into MCC. This allows users to conveniently place configuration instructions side-by-side to the components they are configuring. For more information, refer to the [MCC Melody Example Components Introduction](https://onlinedocs.microchip.com/v2/keyword-lookup?keyword=MCC.MELODY.EXAMPLES&version=latest&redirect=true). 
